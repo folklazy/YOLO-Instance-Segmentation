@@ -1,0 +1,53 @@
+# Local development state
+.venv/
+venv/
+node_modules/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store
+
+# Credentials and environment files
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+*.pem
+*.key
+credentials.json
+secrets.json
+
+# Generated outputs, caches and runtime data
+runs/
+outputs/
+cache/
+logs/
+tmp/
+temp/
+*.log
+*.sqlite
+*.sqlite3
+*.db
+
+# Large downloaded checkpoints and raw datasets (manifest/retrieval doc only)
+weights/
+checkpoints/
+models/weights/
+data/raw/
+data/private/
+datasets/raw/
+datasets/private/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+
+# Preserve small curated examples only after a rights audit;
+# do not place restricted CCTV media or linked annotations in Git.
