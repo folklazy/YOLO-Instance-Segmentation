@@ -51,3 +51,8 @@ datasets/private/
 
 # Preserve small curated examples only after a rights audit;
 # do not place restricted CCTV media or linked annotations in Git.
+
+# Local packaging artifacts
+build/
+dist/
+*.egg-info/

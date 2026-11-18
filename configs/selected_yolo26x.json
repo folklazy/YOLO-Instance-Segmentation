@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "model": "YOLO26x-Seg",
+  "checkpoint": "models/yolo26x-seg.pt",
+  "checkpoint_sha256": "92b3de0065766a17180d6219858717dc9d03cdce8a3ca9576c97fd75aabb64f3",
+  "imgsz": 640,
+  "conf": 0.25,
+  "iou": 0.7,
+  "max_det": 200,
+  "retina_masks": true,
+  "predict_kwargs": {
+    "classes": [
+      0
+    ],
+    "imgsz": 640,
+    "conf": 0.25,
+    "iou": 0.7,
+    "max_det": 200,
+    "retina_masks": true,
+    "half": false,
+    "augment": false,
+    "verbose": false,
+    "save": false
+  },
+  "native_defaults_not_overridden": [
+    "rect",
+    "nms",
+    "end2end"
+  ],
+  "source_repository": "https://github.com/folklazy/Body-Extraction-Human-WebApp",
+  "source_commit": "8e4dfce9ca54d7bab40a1c56552c4c29f1c40176",
+  "host_source_sha256": "9bd186aee6ed4f27710d9fbfb1ca57803c80010c39c6bf4518731b9456ac0edd",
+  "bindings_sha256": "0b6a46d51ba8e8512466f72bbbe134d182a731ea3fe3f0f7edf04a43e83140b2",
+  "source_lines": "inference/inference_host.py initialize detector and detector infer branch",
+  "portability": "Checkpoint supplied explicitly; no download; selected API extraction preserves predict kwargs",
+  "process_settings": {
+    "torch_num_threads": 2,
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false
+  }
+}

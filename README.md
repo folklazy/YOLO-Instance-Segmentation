@@ -1,49 +1,69 @@
 # YOLO Instance Segmentation
 
-> **Curated delivery repository — content migration pending verification.** The project owner reports that implementation/research work was completed in older VS Code/SSH workspaces and source repos, but this new repository does not yet claim a fully packaged release.
+ชุดส่งมอบโค้ด YOLO person instance segmentation ผลเปรียบเทียบ pretrained checkpoints และเหตุผลการใช้ **YOLO26x-Seg** ในโครงงาน Human Body Extraction
 
-ชุดส่งมอบด้านการศึกษาและเปรียบเทียบ YOLO Person Instance Segmentation จากงาน benchmark ที่ทำเสร็จแล้ว โดยเก็บผลจริงที่ตรวจสอบได้และเหตุผลการเลือก YOLO26x-Seg
+ตรวจจัดส่งมอบ 19 พฤศจิกายน 2026 โดยตรวจ workspace จริงและ GitHub ต้นทาง 12 repositories มี **17 checkpoints ต่อ dataset** จาก YOLO26/YOLO11/YOLOv8 ตระกูลละ 5 ขนาด และ YOLOv9 e/c อีก 2 ขนาด ผลเดิมและ source archives ตรวจย้อนกลับได้จาก [inventory](docs/SOURCE_INVENTORY.md)
 
-**PUBLIC — metadata and approved code/docs only.** Never publish restricted company footage or secrets.
+| ผลที่ตรวจจาก canonical tables | Dataset / Metric | ค่า |
+|---|---|---:|
+| YOLO26x-Seg ซึ่งผู้ใช้เลือกไว้ | MOTS20 Mask mAP50–95 | 60.373% |
+| YOLO26x-Seg | CCTV600 Box AP50–95 | 67.201% |
+| YOLOv9e-Seg ได้ Box AP สูงสุดใน CCTV600 | CCTV600 Box AP50–95 | 67.808% |
+| YOLO26x-Seg ได้ Recall สูงสุดใน CCTV600 | bbox IoU0.50 / confidence0.25 | 81.144% |
 
-## เป้าหมายการส่งมอบ
+YOLO26x เป็น frozen selection เดิม มี Mask AP สูงสุดใน MOTS20 และใช้ checkpoint SHA256 เดียวกับ detector ของเว็บที่ตรวจบนเครื่อง ส่วน CCTV600 แสดงข้อแลกเปลี่ยนกับ YOLOv9e ซึ่งมี Box AP/F1 สูงกว่า อ่านเหตุผลการเลือกและข้อจำกัดใน [รายงานวิจัย](docs/RESEARCH_REPORT_TH.md)
 
-- เปรียบเทียบ YOLO26, YOLO11, YOLOv9, YOLOv8 และขนาดที่ใช้ทดลองจริง (user-reported 17 variants; verify roster).
-- บันทึก MOTS20/CCTV Protocol: dataset split, GT, ignore handling, masking, preprocessing, NMS, AP conf floor, maxDet, timing methodology.
-- แยก AP50/AP75/mAP50–95, Precision/Recall/F1, TP-only mask IoU/Dice, latency/FPS, GPU memory, model parameters.
-- ทำตาราง Pareto/near-tie/per-sequence ที่คำนวณจาก saved canonical results โดยไม่เปลี่ยนค่าดั้งเดิม.
-- แสดงภาพ success/failure ที่เผยแพร่ได้และอธิบายเชิงคุณภาพโดยไม่อ้าง architecture superiority เกิน evidence.
-- ส่งมอบ checkpoint manifest + inference adapter + contract เฉพาะที่ตรวจว่าถูกใช้งานจริง พร้อมเหตุผลเลือก YOLO26x-Seg.
+## อ่านตามหน้าที่
 
-## Existing sources (read-only starting points)
+- [สรุปผู้บริหาร](SUMMARY_TH.md) สำหรับการส่งมอบและพรีเซนต์
+- [รายงานวิจัยและข้อค้นพบ](docs/RESEARCH_REPORT_TH.md) ครอบคลุม protocol, metrics, ผล 17 ตัว, scaling, Pareto และข้อจำกัด
+- [วิเคราะห์ภาพจริงที่มีหลักฐานเดิม](docs/QUALITATIVE_ANALYSIS_TH.md) ครอบคลุม success, failure, การบดบัง ขนาด แสง และมุมกล้อง
+- [วิธีติดตั้งและทำซ้ำ](docs/REPRODUCIBILITY_TH.md) พร้อมขอบเขตของ CPU tests และหลักฐาน GPU เดิม
+- [Integration contract](docs/INTEGRATION_CONTRACT.md) สำหรับการใช้ detector กับโปรเจกต์ปลายทาง
+- [Evidence index](docs/EVIDENCE_INDEX.md), [file inventory](provenance/FILE_INVENTORY.csv), [source/copy hashes](provenance/SELECTED_FILES.json)
+- [ผลตรวจส่งมอบ](docs/QUALITY_GATES.md) และ [CHANGELOG](CHANGELOG.md)
 
-- [MOTS20 Scaling Study](https://github.com/folklazy/YOLO_Instance_Segmentation_MOTS20_Scaling_Study)
-- [CCTV600 Scaling Study](https://github.com/folklazy/YOLO_Instance_Segmentation_CCTV600_Scaling_Study)
-- [Largest MOTS20](https://github.com/folklazy/YOLO_Large_Seg_MOTS20_Benchmark)
-- [MOTS20 2nd largest](https://github.com/folklazy/YOLO_Second_Largest_Seg_MOTS20_Benchmark)
-- [MOTS20 Medium](https://github.com/folklazy/YOLO_Medium_Seg_MOTS20_Benchmark)
-- [MOTS20 Small](https://github.com/folklazy/YOLO_Small_Seg_MOTS20_Benchmark)
-- [MOTS20 Nano](https://github.com/folklazy/YOLO_Nano_Seg_MOTS20_Benchmark)
+## โค้ดที่ใช้ต่อได้
 
-**Important:** these references are candidates, not proof that all content is current, supported or safe to move. Agent must verify files and commits before copying.
+```python
+from yolo_instance_segmentation import PersonSegmenter
 
-## เอกสารสำคัญ
+model = PersonSegmenter('/path/to/yolo26x-seg.pt', device='cuda:0')
+# rgb เป็น numpy.uint8 รูป H×W×3 ตาม RGB
+result = model.predict_rgb(rgb)
+# masks N×H×W, boxes N×4, scores N, class_ids N, original_wh [W,H]
+```
 
-- [AGENTS.md](AGENTS.md) — read first; permanent agent rules
-- [Scope & deliverables](docs/SCOPE_AND_DELIVERABLES.md) — exact responsibilities and exclusions
-- [Source inventory](docs/SOURCE_INVENTORY.md) — existing source pointers and audit template
-- [Quality gates](docs/QUALITY_GATES.md) — acceptance checklist
-- [Active task](tasks/ACTIVE_TASK.md) — first-pass work brief; delete **only after** verified completion and durable handoff
-- [Project Hub](https://github.com/folklazy/Human-Body-Extraction)
-- [Final End-to-End Repository](https://github.com/folklazy/A-Comparative-Study-of-YOLO-Based-Instance-Segmentation)
+จัดเตรียม local weights ตาม [manifest](models/MANIFEST.json) และ environment ตามคู่มือก่อนเรียกโมเดล package ตรวจ checkpoint hash ก่อนโหลด ตัวอย่าง CLI รับไฟล์ใหม่และบันทึก NPZ ที่ path ใหม่
 
-## Release status
+```bash
+python scripts/predict_person.py --checkpoint /path/to/yolo26x-seg.pt \
+  --image /path/to/new-image.jpg --output /path/to/private/persons.npz --device cuda:0
+```
 
-| Stage | Status |
-|---|---|
-| Historical experiments / implementation | Reported complete by project owner; specific commits to be audited |
-| Clean delivery repository | Initialized |
-| Source migration and code/package verification | **Pending** |
-| Actual tests and release evidence in this repository | **Not verified yet** |
+ตัวอย่างนี้เป็นคำสั่งใช้งานสำหรับผู้รับงาน การจัดส่งมอบรอบนี้ตรวจ imports/CPU contracts/evaluators โดยอาศัยหลักฐาน inference ของต้นทางสำหรับผลวิจัย รายละเอียดสถานะอยู่ใน quality gates
 
-Only claim numbers and performance backed by linked canonical files. Do not make up final file counts, model parameters or deployment commands.
+## โครงสร้าง
+
+```text
+src/yolo_instance_segmentation/   detector ที่แยกจากส่วน YOLO ของเว็บ + MOTS20 mask evaluator/loader
+reference/cctv600/                source/scorer/packet/loader/tests ของ benchmark ที่เก็บครบ dependency
+configs/                         ค่า detector ที่เว็บใช้จริงและ source binding
+models/                          checkpoint manifest
+results/mots20/                  aggregate CSV และกราฟ
+results/cctv600/                 aggregate CSV และกราฟ
+scripts/                         CLI และตัวตรวจส่งมอบ
+tests/                          CPU acceptance และ metric regressions
+docs/                           ขอบเขต รายงาน วิธีทำซ้ำ และดัชนีหลักฐาน
+provenance/                      inventory, source heads, file hashes และ validation
+```
+
+โค้ดใน reference ใช้ layout และ scientific bindings ของงานต้นฉบับ การทำ benchmark เต็มให้อ้าง source commit และคำสั่งในคู่มือ ส่วน package หลักมี interface แยกเพื่อใช้ detector ต่อได้
+
+## สิทธิ์และ artifact ภายนอก
+
+[Third-party notices](THIRD_PARTY_NOTICES.md) ระบุ Ultralytics AGPL-3.0 และประเด็นการรับ weights/data ภาพ CCTV, annotation รายภาพ, dense predictions, credentials และ checkpoints เก็บภายนอก Git ชุดนี้ กราฟที่นำมาเก็บเป็น aggregate plots ภาพ MOTS20 ประกอบอ้างไปยังหลักฐานที่เผยแพร่อยู่แล้ว
+
+[Project Hub](https://github.com/folklazy/Human-Body-Extraction) · [Final integrated project](https://github.com/folklazy/A-Comparative-Study-of-YOLO-Based-Instance-Segmentation)
+
+สถานะงานชั่วคราวอยู่ใน [ACTIVE_TASK](tasks/ACTIVE_TASK.md) และรอ owner acceptance ก่อนปิดไฟล์นั้น

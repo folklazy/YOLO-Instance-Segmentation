@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "human-body-yolo-segmentation"
+version = "0.1.0"
+description = "Curated YOLO person segmentation runtime and research evidence"
+requires-python = ">=3.12"
+dependencies = ["numpy", "Pillow", "ultralytics==8.4.160", "pycocotools==2.0.11"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

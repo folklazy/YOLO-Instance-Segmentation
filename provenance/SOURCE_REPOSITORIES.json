@@ -1,0 +1,245 @@
+{
+  "checked_utc": "2026-11-18T19:52:26.099962+00:00",
+  "repositories": [
+    {
+      "path": "YOLO_Instance_Segmentation_CCTV600_Scaling_Study",
+      "source_repository": "https://github.com/folklazy/YOLO_Instance_Segmentation_CCTV600_Scaling_Study",
+      "head": "072e205f7d61fa52ec301da50cc65d96451572b7",
+      "branch": "main",
+      "local_branches": [
+        "main 072e205f7d61fa52ec301da50cc65d96451572b7"
+      ],
+      "remote_heads": [
+        {
+          "sha": "072e205f7d61fa52ec301da50cc65d96451572b7",
+          "ref": "refs/heads/main"
+        }
+      ],
+      "remote_verified": true,
+      "head_matches_remote_main": true,
+      "modified_tracked": [],
+      "untracked_count": 0,
+      "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "YOLO_Instance_Segmentation_MOTS20_Scaling_Study",
+      "source_repository": "https://github.com/folklazy/YOLO_Instance_Segmentation_MOTS20_Scaling_Study",
+      "head": "5551593459646fe42494958192e5410805ab4b48",
+      "branch": "main",
+      "local_branches": [
+        "main 5551593459646fe42494958192e5410805ab4b48"
+      ],
+      "remote_heads": [
+        {
+          "sha": "5551593459646fe42494958192e5410805ab4b48",
+          "ref": "refs/heads/main"
+        }
+      ],
+      "remote_verified": true,
+      "head_matches_remote_main": true,
+      "modified_tracked": [],
+      "untracked_count": 1,
+      "status_sha256": "948f30a62382ccfece425562c8fce8ce75acbcf1684cd1c23a2ed581593e195c"
+    },
+    {
+      "path": "YOLO_Large_Seg_CCTV600_Benchmark",
+      "source_repository": "https://github.com/folklazy/YOLO_Large_Seg_CCTV600_Benchmark",
+      "head": "9106881f5a9885383db48da94ae173e97acfb7fc",
+      "branch": "main",
+      "local_branches": [
+        "main 9106881f5a9885383db48da94ae173e97acfb7fc"
+      ],
+      "remote_heads": [
+        {
+          "sha": "9106881f5a9885383db48da94ae173e97acfb7fc",
+          "ref": "refs/heads/main"
+        }
+      ],
+      "remote_verified": true,
+      "head_matches_remote_main": true,
+      "modified_tracked": [],
+      "untracked_count": 0,
+      "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "YOLO_Large_Seg_MOTS20_Benchmark",
+      "source_repository": "https://github.com/folklazy/YOLO_Large_Seg_MOTS20_Benchmark",
+      "head": "172e21b9f2996bae74fb591cfdd1740e6e92dd46",
+      "branch": "main",
+      "local_branches": [
+        "main 172e21b9f2996bae74fb591cfdd1740e6e92dd46"
+      ],
+      "remote_heads": [
+        {
+          "sha": "172e21b9f2996bae74fb591cfdd1740e6e92dd46",
+          "ref": "refs/heads/main"
+        }
+      ],
+      "remote_verified": true,
+      "head_matches_remote_main": true,
+      "modified_tracked": [],
+      "untracked_count": 78,
+      "status_sha256": "bb24e1379151990df8da0b667cf5ded6941c221543f7ad0299a02a3f323c052e"
+    },
+    {
+      "path": "YOLO_Medium_Seg_CCTV600_Benchmark",
+      "source_repository": "https://github.com/folklazy/YOLO_Medium_Seg_CCTV600_Benchmark",
+      "head": "27d909e73e31904f5761bca9533e2b31a491e3b3",
+      "branch": "main",
+      "local_branches": [
+        "main 27d909e73e31904f5761bca9533e2b31a491e3b3"
+      ],
+      "remote_heads": [
+        {
+          "sha": "27d909e73e31904f5761bca9533e2b31a491e3b3",
+          "ref": "refs/heads/main"
+        }
+      ],
+      "remote_verified": true,
+      "head_matches_remote_main": true,
+      "modified_tracked": [],
+      "untracked_count": 0,
+      "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "YOLO_Medium_Seg_MOTS20_Benchmark",
+      "source_repository": "https://github.com/folklazy/YOLO_Medium_Seg_MOTS20_Benchmark",
+      "head": "40df395545754be0847f6aa144ffb59f63389af6",
+      "branch": "main",
+      "local_branches": [
+        "main 40df395545754be0847f6aa144ffb59f63389af6"
+      ],
+      "remote_heads": [
+        {
+          "sha": "40df395545754be0847f6aa144ffb59f63389af6",
+          "ref": "refs/heads/main"
+        }
+      ],
+      "remote_verified": true,
+      "head_matches_remote_main": true,
+      "modified_tracked": [],
+      "untracked_count": 0,
+      "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "YOLO_Nano_Seg_CCTV600_Benchmark",
+      "source_repository": "https://github.com/folklazy/YOLO_Nano_Seg_CCTV600_Benchmark",
+      "head": "f480d7a1b78ad2a1d48991f2a37cf9feda244f3b",
+      "branch": "main",
+      "local_branches": [
+        "main f480d7a1b78ad2a1d48991f2a37cf9feda244f3b"
+      ],
+      "remote_heads": [
+        {
+          "sha": "f480d7a1b78ad2a1d48991f2a37cf9feda244f3b",
+          "ref": "refs/heads/main"
+        }
+      ],
+      "remote_verified": true,
+      "head_matches_remote_main": true,
+      "modified_tracked": [],
+      "untracked_count": 0,
+      "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "YOLO_Nano_Seg_MOTS20_Benchmark",
+      "source_repository": "https://github.com/folklazy/YOLO_Nano_Seg_MOTS20_Benchmark",
+      "head": "c4ceca0aaba1982d10cfa3fe9d4209baab0dba96",
+      "branch": "main",
+      "local_branches": [
+        "main c4ceca0aaba1982d10cfa3fe9d4209baab0dba96"
+      ],
+      "remote_heads": [
+        {
+          "sha": "c4ceca0aaba1982d10cfa3fe9d4209baab0dba96",
+          "ref": "refs/heads/main"
+        }
+      ],
+      "remote_verified": true,
+      "head_matches_remote_main": true,
+      "modified_tracked": [],
+      "untracked_count": 0,
+      "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "YOLO_Second_Largest_Seg_CCTV600_Benchmark",
+      "source_repository": "https://github.com/folklazy/YOLO_Second_Largest_Seg_CCTV600_Benchmark",
+      "head": "f8829cf11a66c035bea1a9a6106d3fca5cbf9074",
+      "branch": "main",
+      "local_branches": [
+        "main f8829cf11a66c035bea1a9a6106d3fca5cbf9074"
+      ],
+      "remote_heads": [
+        {
+          "sha": "f8829cf11a66c035bea1a9a6106d3fca5cbf9074",
+          "ref": "refs/heads/main"
+        }
+      ],
+      "remote_verified": true,
+      "head_matches_remote_main": true,
+      "modified_tracked": [],
+      "untracked_count": 0,
+      "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "YOLO_Second_Largest_Seg_MOTS20_Benchmark",
+      "source_repository": "https://github.com/folklazy/YOLO_Second_Largest_Seg_MOTS20_Benchmark",
+      "head": "3c0bd7845166d23df1eb52d312e24fad930f9298",
+      "branch": "main",
+      "local_branches": [
+        "main 3c0bd7845166d23df1eb52d312e24fad930f9298"
+      ],
+      "remote_heads": [
+        {
+          "sha": "3c0bd7845166d23df1eb52d312e24fad930f9298",
+          "ref": "refs/heads/main"
+        }
+      ],
+      "remote_verified": true,
+      "head_matches_remote_main": true,
+      "modified_tracked": [],
+      "untracked_count": 0,
+      "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "YOLO_Small_Seg_CCTV600_Benchmark",
+      "source_repository": "https://github.com/folklazy/YOLO_Small_Seg_CCTV600_Benchmark",
+      "head": "b49325b06c7956b7bae82ba923401652686fea28",
+      "branch": "main",
+      "local_branches": [
+        "main b49325b06c7956b7bae82ba923401652686fea28"
+      ],
+      "remote_heads": [
+        {
+          "sha": "b49325b06c7956b7bae82ba923401652686fea28",
+          "ref": "refs/heads/main"
+        }
+      ],
+      "remote_verified": true,
+      "head_matches_remote_main": true,
+      "modified_tracked": [],
+      "untracked_count": 0,
+      "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "YOLO_Small_Seg_MOTS20_Benchmark",
+      "source_repository": "https://github.com/folklazy/YOLO_Small_Seg_MOTS20_Benchmark",
+      "head": "56adbc9f8dfcbbfe37c9a254cb04007650427617",
+      "branch": "main",
+      "local_branches": [
+        "main 56adbc9f8dfcbbfe37c9a254cb04007650427617"
+      ],
+      "remote_heads": [
+        {
+          "sha": "56adbc9f8dfcbbfe37c9a254cb04007650427617",
+          "ref": "refs/heads/main"
+        }
+      ],
+      "remote_verified": true,
+      "head_matches_remote_main": true,
+      "modified_tracked": [],
+      "untracked_count": 0,
+      "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

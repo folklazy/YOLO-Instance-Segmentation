@@ -1,0 +1,2 @@
+# Keep accepted CSV bytes identical to their source snapshots.
+*.csv -text

@@ -1,6 +1,8 @@
 # ACTIVE TASK — Initial curated handoff for YOLO Instance Segmentation
 
-**Status:** OPEN (temporary task brief; do not delete until validation + acceptance).
+**Status:** CURATED_VALIDATED_OWNER_REVIEW_PENDING — 19 พฤศจิกายน 2026
+
+คัดส่งมอบและตรวจในขอบเขตแล้ว: [README](../README.md), [สรุป](../SUMMARY_TH.md), [ผลตรวจ](../docs/QUALITY_GATES.md) และ [validation record](../provenance/VALIDATION.json) รอ owner acceptance ก่อนลบไฟล์นี้ ประวัติ task brief ด้านล่างเก็บไว้เพื่ออ้างอิง ไม่ใช่รายการงานที่ยังไม่ได้เริ่ม
 
 ## Objective
 Build the clean delivery package for YOLO Instance Segmentation from the owner's completed but mixed historical VS Code/SSH workspaces and GitHub evidence. This repo was newly created and is **not** proof that the original work has migrated.

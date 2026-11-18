@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "source_repositories_unchanged": 12,
+  "small_source_hashes_unchanged": 1205,
+  "tier_master_rows_equal": 34,
+  "actual_app_predict_keyword_constants_equal": 9,
+  "device_and_confidence_contract": "CPU fixture and source-default review",
+  "duplicate_content_groups": 168,
+  "original_datasets_modified": false,
+  "canonical_results_modified": false,
+  "restricted_media_copied": false
+}

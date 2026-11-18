@@ -1,0 +1,94 @@
+{
+  "status": "PASS_WITH_DISCLOSED_LIMITATIONS",
+  "checked_at": "2026-11-18T20:15:29.707638+00:00",
+  "owner_acceptance": "PENDING",
+  "CPU_contract_and_MOTS_tests": {
+    "total": 24,
+    "passed": 23,
+    "skipped": 1,
+    "skip_reason": "Historical run_smoke runner-summary test is outside the extracted package; preserved as explicitly skipped."
+  },
+  "CCTV_reference_tests": {
+    "total": 14,
+    "passed": 14,
+    "skipped": 0
+  },
+  "unique_tests": {
+    "total": 38,
+    "passed": 37,
+    "skipped": 1,
+    "failed": 0
+  },
+  "package_build": {
+    "status": "PASS",
+    "wheel": "human_body_yolo_segmentation-0.1.0-py3-none-any.whl",
+    "sha256": "d52266fe6a98f158152f6bb1f33341c25f168d0811148b766eb37c2843ed7221",
+    "entries": 9,
+    "import_from_wheel": "PASS",
+    "dependency_installation": false
+  },
+  "imports": {
+    "modules_checked": 11,
+    "status": "PASS",
+    "cli_help": "PASS"
+  },
+  "integrity": {
+    "status": "PASS",
+    "source_repositories_unchanged": 12,
+    "small_source_hashes_unchanged": 1205,
+    "tier_master_rows_equal": 34,
+    "actual_app_predict_keyword_constants_equal": 9,
+    "device_and_confidence_contract": "CPU fixture and source-default review",
+    "duplicate_content_groups": 168,
+    "original_datasets_modified": false,
+    "canonical_results_modified": false,
+    "restricted_media_copied": false
+  },
+  "aggregate_consistency": {
+    "canonical_model_rows": 34,
+    "precision_recall_f1_formulas": 102,
+    "fps_formulas": 34,
+    "decimal_frontiers": 2,
+    "status": "PASS"
+  },
+  "current_host_observation": {
+    "gpu": "Tesla T4",
+    "driver": "580.178.04",
+    "memory_total_MiB": 15360,
+    "cuda_available": true,
+    "new_GPU_inference": "NOT_RUN"
+  },
+  "new_model_inference_calls": 0,
+  "training_or_full_benchmark_rerun": false,
+  "measured_values_changed": false,
+  "extracted_runtime_GPU_output_parity": "NOT_RUN",
+  "external_resources": {
+    "selected_checkpoint_hash": "ACTUAL_LOCAL_FILE_VERIFIED",
+    "other_16_checkpoint_hashes": "CROSS_CHECKED_HISTORICAL_MANIFESTS_NOT_REHASHED",
+    "private_CCTV_images_and_annotations": "EXCLUDED",
+    "weights": "EXTERNAL"
+  },
+  "validation_log_root": "YOLO-Instance-Segmentation.local/curation-20261119",
+  "private_log_sha256": {
+    "cctv-tests.log": "7af22cdf00b7e0ff578ac8ff8e8e4eb91c194c897b718c8134b0762b4530d06a",
+    "runtime-mots-tests.log": "45a0bef0471b31117771d4c2530be23a0d1aa5e296c1cef6e6b9b0c20c980c74",
+    "runtime-mots-final.log": "6131c5d3f234639e9569ff97552c0850b158a4424605bc8dd2b397c35ef185cd",
+    "runtime-mots-tests-with-external-gt.log": "77c54710eac4b9dca6d51cb2d95c0c973ad7f5e769f1c4d16666b3a105505581",
+    "wheel-build.log": "37d30e9ccd3493872b0a7d8070da794d78de7f15d791a53112b6fd6bfeffb2aa"
+  },
+  "limitations": [
+    "A fresh-machine full benchmark needs external datasets, weights, pinned source archives and original source-workspace layout.",
+    "Historical result acceptance warnings remain applicable; packaging checks do not constitute new GPU benchmark acceptance.",
+    "Source commit/path references and internal links were checked; not all external third-party URLs were fetched again.",
+    "Project Hub and Final repository were not modified."
+  ],
+  "publication_review": {
+    "changed_files": 84,
+    "canonical_CSV_index_bytes_preserved": 26,
+    "pinned_source_file_links_checked": 36,
+    "local_markdown_links_checked": 45,
+    "secret_pattern_and_restricted_extension_scan": "PASS",
+    "aggregate_PNGs_only": 8,
+    "new_model_inference_calls": 0
+  }
+}
